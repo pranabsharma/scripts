@@ -1,5 +1,7 @@
 #!/bin/bash
-#Create MongoDB sharded cluster with 2 shards for test environment
+#This script creates a mongodb sharded cluster in a single server 
+#This cluster can be used for testing and development task and never recommended for production environment :)
+#MongoDB sharded cluster has 2 shards for test environment
 #Author Pranab Sharma <pranabksharma@gmail.com>
 
 #Create the data directories
