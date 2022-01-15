@@ -1,7 +1,12 @@
 #Run this script on master node
+sudo swapoff -a
 
 #Ceating Kubernetes clusters using the basis kubeadm tool
-sudo kubeadm init
+
+if ! sudo kubeadm init; then
+    echo "ERROR!!!! Fix the error first, quiting"
+    exit
+fi
 
 #Copying kubeconfig file to user's home directory
 mkdir -p ~/.kube 
@@ -13,5 +18,4 @@ wget https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | 
 
 kubectl apply -f wave.yaml 
 
-
-
+kubectl get pod -n kube-system
