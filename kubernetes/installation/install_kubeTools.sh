@@ -14,4 +14,4 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # Clearning any Iptable rules
-sudo iptables -F && iptables -t nat -F && iptables -t mangle -F && iptables -X
+sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
